@@ -22,7 +22,7 @@ function App() {
   const [show, setShow] = useState(false)
 
   return (
-    <div className="App">
+    <div className="Modal">
       <button onClick= {() => setShow(true) }>Show Modal</button>
       <Modal title="My Modal" onClose={() => setShow(false)} show={show}>
         <p>This is a modal body</p>
