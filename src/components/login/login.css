@@ -7,7 +7,7 @@
   background-color: linear-gradient(79deg, #fcfced, #fcedfc 40%, #ebf6ff);
 } */
 
-.modal {
+.login {
   position: fixed;
   left: 0;
   top: 0;
@@ -22,44 +22,63 @@
   pointer-events: none;
 }
 
-.modal.show {
+.loginButton {
+  font-family: 'Inter';
+  font-weight: 900;
+  letter-spacing: 1px;
+  position: fixed;
+  display: flex;
+  right: 0;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none;
+  border-radius:30px;
+  padding: 11px;
+}
+
+.loginButton:hover {
+  color: #f59842;
+  cursor: pointer;
+}
+
+.login.show {
   opacity: 1;
   pointer-events: visible;
 }
 
-.modal.enter-done {
+.login.enter-done {
   opacity: 1;
   pointer-events: visible;
 }
 
-.modal.exit {
+.login.exit {
   opacity: 0;
 }
 
-.modal-content {
+.login-content {
   width: 500px;
   background-color: #fff;
   transform: translateY(-200px);
   transition: all 0.3s ease-in-out;
 }
 
-.modal.enter-done .modal-content {
+.login.enter-done .login-content {
   transform: translateY(0);
 }
 
-.modal.exit .modal-content {
+.login.exit .login-content {
   transform: translateY(-200px)
 }
 
-.modal-header, .modal-footer {
+.login-header, .login-footer {
   padding: 10px;
 }
 
-.modal-title {
+.login-title {
   margin: 0;
 }
 
-.modal-body {
+.login-body {
   padding: 10px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
