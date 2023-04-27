@@ -1,0 +1,70 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input[type=text] {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(255, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 100 18px Helvetica;
+    overflow: hidden;
+    line-height: 40px;
+    margin-right: 0;
+    min-width: 25%;
+  }
+  
+  input[type=button] {
+    background-color: #fff;
+    border: 0;
+    border-radius: 1px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 600 15px Verdana;
+    overflow: hidden;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 3px;
+  }
+  input[type=button]:hover {
+    background: rgb(235, 235, 235);
+  }
+  input[type=button].button-primary {
+    background-color: #e82f1a;
+    color: rgb(0, 0, 0);
+  }
+  input[type=button].button-primary:hover {
+    background-color: #ffffff;
+  }
+  
+  #instructions {
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 1px;
+    box-shadow: 0 1px 4px -1px rgba(255, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Helvetica;
+    overflow: hidden;
+    padding: 1rem;
+    font-size: medium;
+  }
+  
