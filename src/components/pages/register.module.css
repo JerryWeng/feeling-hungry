@@ -1,18 +1,16 @@
-body 
-{
+.container{
   font-family:sans-serif; 
   background: -webkit-linear-gradient(to right, #ff0000, #ffffff93); 
-  background: linear-gradient(to right, #ff0000, #ffffff93); 
+  background: linear-gradient(to right, #ff0000, #ffffff93);
   color:whitesmoke;
+  height:100vh;
 }
 
-
-h1{
+.title{
     text-align: center;
 }
 
-
-form{
+.registerForm{
   width:25rem;
   margin: auto;
   color:rgb(28, 0, 0);
@@ -23,7 +21,7 @@ form{
   border: 5px solid rgba(255, 6, 6, 0.125);
 }
 
-input{
+.inputBox{
     width: 100%;
     margin: 5px 0;
     border-radius: 10px;
@@ -31,7 +29,7 @@ input{
     box-sizing: border-box;
   }
 
-button {
+.registerButton {
     background-color: #ffffff;
     color: rgb(5, 0, 0);
     padding: 14px 20px;
@@ -41,7 +39,7 @@ button {
     font-size: 18px;
   }
 
-button:hover {
+.registerButton:hover {
     opacity: 0.6;
     cursor: pointer;
   }

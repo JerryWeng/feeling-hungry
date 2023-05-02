@@ -1,27 +1,34 @@
-import React, { useState } from "react";
+import styles from './register.module.css'
 
-export const Register = (props) => {
-    const [email, setEmail] = useState('');
-    const [pass, setPass]  = useState('');
-    const [name, setName] = useState('');
+const Register = () => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
-    }
+    return(
+        <div class={styles['container']}>
+            <h1 class={styles['title']}>Register for Grub Gram now!</h1>
+            <form class={styles['registerForm']}action="">
+                <div class={styles['headings']}>
+                    <h3>Sign up</h3>
+                </div>
 
-    return (
-        <div className="auth-form-container">
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Full name</label>
-                <input value={name} name="name" id="name" placeholder="Full Name"/>
-                <label htmlFor="email">email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter email" id="email" name="email"/>
-                <label htmlFor="password">password</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Enter password" id="password" name="password"/>
-                <button type="submit">Log in</button>
+                <div class={styles['main']}>
+                    <label for="username">Desired Username: </label>
+                    <input class={styles.inputBox} type="text" placeholder="Enter Username" name="username" required/>
+
+                    <br></br>
+                    
+                    <label for="pswrd">Desired Password: </label>
+                    <input class={styles.inputBox} type="password" placeholder="Enter Password" name="pswrd" required/>
+ 
+                    <div class={styles['subcontainer']}>
+                        <p class={styles['forgotpsd']}> <a href="#">Forgot Password?</a></p>
+                    </div>
+
+                    <button class={styles.registerButton} type="submit">Register</button>
+                </div>
+
             </form>
-            <button onClick={() => props.onFormSwitch('login')}>Already have an account?</button>
         </div>
     )
 }
+
+export default Register

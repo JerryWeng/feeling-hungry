@@ -46,7 +46,7 @@
   pointer-events: visible;
 }
 
-.login.enter-done {
+.login:global(.enter-done) {
   opacity: 1;
   pointer-events: visible;
 }
@@ -62,7 +62,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.login.enter-done .login-content {
+.login:global(.enter-done) .login-content {
   transform: translateY(0);
 }
 
