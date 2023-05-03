@@ -8,18 +8,18 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 const App = () => {
 
   return (
-      // <BrowserRouter>
-      //   <div>
-      //     <Link to="/">Home</Link>
-      //     <Link to="/Social">Social</Link>
-      //   </div>
-      //   <Routes>
-      //     <Route exact path='/' element={<Home />} />
-      //     <Route exact path='/social' element={<Social />} />
-      //     <Route exact path='/register' element={<Register />} />
-      //   </Routes>
-      // </BrowserRouter>
-      <Map />
+      <BrowserRouter>
+        <div>
+          <Link to="/">Home</Link>
+          <Link to="/Social">Social</Link>
+        </div>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/social' element={<Social />} />
+          <Route exact path='/register' element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+
   );
 }
 
