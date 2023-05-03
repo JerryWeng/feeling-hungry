@@ -5,16 +5,14 @@ import Social from "./components/pages/Social.jsx";
 import Map from "./components/Map.jsx";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
+import RouterLink from "./components/ui/RouterLink.jsx";
+
 const App = () => {
 	return (
 		<BrowserRouter>
 			<div className="bg-blue-900 space-x-10 px-2 py-4">
-				<Link to="/" className="bg-black text-white px-4 py-2 rounded-md">
-					Home
-				</Link>
-				<Link to="/Social" className="bg-black text-white px-4 py-2 rounded-md">
-					Social
-				</Link>
+				<RouterLink linkText="Home" to="/" />
+				<RouterLink linkText="Social" to="/social" />
 			</div>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
