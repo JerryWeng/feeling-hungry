@@ -1,8 +1,6 @@
 import Register from "./components/pages/Register.jsx";
-import Navbar from "./components/Navbar.jsx";
 import Home from "./components/pages/Home.jsx";
 import Social from "./components/pages/Social.jsx";
-import Map from "./components/Map.jsx";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Header from "./components/layout/Header";
