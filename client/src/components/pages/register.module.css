@@ -1,13 +1,11 @@
 .container{
   font-family:sans-serif; 
-  background: -webkit-linear-gradient(to right, #ff0000, #ffffff93); 
-  background: linear-gradient(to right, #ff0000, #ffffff93);
-  color:whitesmoke;
   height:100vh;
 }
 
 .title{
     text-align: center;
+    font-size: x-large;
 }
 
 .registerForm{
