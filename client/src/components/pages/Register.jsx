@@ -11,13 +11,14 @@ const Register = () => {
                 </div>
 
                 <div class={styles['main']}>
-                    <label for="username">Desired Username: </label>
-                    <input class={styles.inputBox} type="text" placeholder="Enter Username" name="username" required/>
-
-                    <br></br>
+                    <label for="username">Username: </label>
+                    <input class={styles.inputBox} type="text" placeholder="Username" name="username" required/>
                     
-                    <label for="pswrd">Desired Password: </label>
-                    <input class={styles.inputBox} type="password" placeholder="Enter Password" name="pswrd" required/>
+                    <label for="pswrd">Password: </label>
+                    <input class={styles.inputBox} type="password" placeholder="Password" name="pswrd" required/>
+
+                    <label for="confpswrd">Confirm Password: </label>
+                    <input class={styles.inputBox} type="confpassword" placeholder="Confirm Password" name="confpswrd" required/>
  
                     <div class={styles['subcontainer']}>
                         <p class={styles['forgotpsd']}> <a href="#">Forgot Password?</a></p>
