@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 node_modules/
 
 .DS_Store
 
 .env
+=======
+node_modules
+>>>>>>> parent of 6301dffa (show map)

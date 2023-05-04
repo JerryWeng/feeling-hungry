@@ -7,12 +7,12 @@ const Home = () => {
         // <div id="map"></div>
         <div>
             <div>
-                {/* <SearchBar /> */}
                 <Login />
             </div>
-            {/* <div>
+            <div>
                 <Map />
-            </div> */}
+                <SearchBar />
+            </div>
         </div>
         
     )
