@@ -9,7 +9,8 @@ const app = express()
 mongoose.set('strictQuery', false)
 
 app.use(express.json()) // Allows for requests to be read as JSON
-app.use( // Allows for client and server to communicate on different ports
+app.use(
+    // Allows for client and server to communicate on different ports
     cors({
         origin: '*',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -19,12 +20,14 @@ app.use( // Allows for client and server to communicate on different ports
     })
 )
 
-app.use((req, res, next) => { // Whenever a request is made, log out what happened
+app.use((req, res, next) => {
+    // Whenever a request is made, log out what happened
     console.log(req.method)
     next()
 })
 
-app.use('/api/auth', AuthRoute )
+// Defining the routes for the server to listen on, transitive relationship
+app.use('/api/auth', AuthRoute)
 
 mongoose
     .connect(process.env.MONGO_URI)
