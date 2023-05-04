@@ -3,7 +3,7 @@ import express from "express";
 // Controller functions will be imported here
 import {
     registerUser
-} from '../controllers/authController'
+} from '../controllers/authController.js'
 
 // Create a Router object so Express knows that you will have routes, assigned into variable AuthRoute
 const AuthRoute = express.Router()

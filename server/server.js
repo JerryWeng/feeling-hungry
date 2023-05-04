@@ -1,8 +1,10 @@
-require('dotenv').config()
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-const express = require('express')
-const mongoose = require('mongoose')
-const { default: AuthRoute } = require('./routes/auth')
+import express from 'express'
+import mongoose from 'mongoose'
+import cors from 'cors'
+import AuthRoute from './routes/auth.js'
 
 const app = express()
 
@@ -27,11 +29,11 @@ app.use((req, res, next) => { // Whenever a request is made, log out what happen
 app.use('/api/auth', AuthRoute )
 
 mongoose
-    .connect(process.env.MONGO_URI)
+    .connect(process.env.REACT_APP_MONGO_URL)
     .then(() => {
         //listen for requests
         app.listen(process.env.PORT, () => {
-            console.log('connected to db and listening on port', process.env.PORT)
+            console.log('connected to db and listening on port', process.env.REACT_APP_PORT)
         })
     })
     .catch((error) => {

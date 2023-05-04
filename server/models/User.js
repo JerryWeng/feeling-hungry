@@ -4,7 +4,7 @@ mongoose.set('strictQuery', false)
 const UserSchema = new Schema(
     {
         id: {
-            type: int,
+            type: Number,
             required: true,
         },
         username: {

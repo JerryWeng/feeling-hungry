@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import UserModel from "../models/User";
+import UserModel from "../models/User.js";
 
 export const registerUser = async (req, res) => {
     // Destructuring payload aka request body (request will be in JSON format so we can destructure), REQUEST DATA MUST BE SENT VIA CLIENT
