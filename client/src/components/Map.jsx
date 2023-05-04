@@ -4,22 +4,17 @@ import styles from "./map.module.css"
 
 const Map = () => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
-
+  const map = styles['map-container'];
   if(!isLoaded) return <div>Loading...</div>
-  return <initMap />;
-}
 
-
-function initMap() {
   return (
     <GoogleMap
       zoom={10}
       center={{ lat: 44, lng: -80 }}
-      mapContainerClassName="map-container"
+      mapContainerClassName= {map}
     ></GoogleMap>
   );
 }
-
 export default Map
