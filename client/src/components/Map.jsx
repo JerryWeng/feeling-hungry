@@ -9,7 +9,6 @@ const Map = () => {
   const map = styles['map-container'];
   if(!isLoaded) return <div>Loading...</div>
 
-
   return (
     <GoogleMap
       zoom={10}
