@@ -1,41 +1,53 @@
-import Register from "../pages/Register.jsx";
 import React, { useState } from "react";
 import LoginTransition from "./LoginTransition.jsx";
 import styles from "./login.module.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 	const [show, setShow] = useState(false);
-	const [email, setEmail] = useState("");
-	const [pass, setPass] = useState("");
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+
+		console.log(username, password)
+	}
 
 	return (
 		<div>
-			<button className={styles.loginButton} onClick={() => setShow(true)}>
+			<button 
+				className={styles.loginButton} 
+				onClick={() => {
+					setShow(true) 
+				}}>
 				Login
 			</button>
+
 			<LoginTransition onClose={() => setShow(false)} show={show}>
-				<div className={styles.loginInformation}>
-					<label htmlFor="email">email</label>
+				<form onSubmit={handleSubmit}>
+					<label htmlFor="username">Username:  </label>
 					<input
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						type="email"
-						placeholder="Enter email"
-						id="email"
-						name="email"
+						type="username"
+						onChange={(e) => setUsername(e.target.value)}
+						value={username}
+						placeholder="Enter username"
 					/>
-					<label htmlFor="password">password</label>
+					<label htmlFor="password">Password: </label>
 					<input
-						value={pass}
-						onChange={(e) => setPass(e.target.value)}
 						type="password"
+						onChange={(e) => setPassword(e.target.value)}
+						value={password}
 						placeholder="Enter password"
-						id="password"
-						name="password"
+						
 					/>
-					<Link to="/Register">Don't have an account?</Link>
-				</div>
+					<div>
+						<Link to="/register">Don't have an account?</Link>
+					</div>
+					<div className={styles['loginSubmit']}>
+						<button className={styles['submit']} type="submit">Login</button>
+					</div>
+				</form>
 			</LoginTransition>
 		</div>
 	);

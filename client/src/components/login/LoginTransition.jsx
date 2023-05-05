@@ -11,14 +11,14 @@ const LoginTransition = props => {
             <div className={`${styles['login']} ${props.show ? styles['show'] : ''}`} onClick={props.onClose}>
                 <div className={styles['login-content']} onClick={e => e.stopPropagation()}>
                     <div className={styles['login-header']}>
-                        <h4 className={styles['login-title']}>{props.title}</h4>
+                        <h4 className={styles['login-title']}>Login</h4>
                     </div>
                     <div className={styles['login-body']}>
                         {props.children}
                     </div>
-                    <div className={styles['login-footer']}>
+                    {/* <div className={styles['login-footer']}>
                         <button onClick={props.onClose} className="loginButton">Close</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </CSSTransition>

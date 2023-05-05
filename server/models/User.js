@@ -3,13 +3,10 @@ mongoose.set('strictQuery', false)
 
 const UserSchema = new Schema(
     {
-        id: {
-            type: Number,
-            required: true,
-        },
         username: {
             type: String,
             required: true,
+            unique: true
         },
         password: {
             type: String,
@@ -20,7 +17,6 @@ const UserSchema = new Schema(
 )
 
 const UserModel = mongoose.model("User", UserSchema)
-
 export default UserModel
 
 

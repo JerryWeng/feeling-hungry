@@ -41,6 +41,11 @@
   cursor: pointer;
 }
 
+.loginInformation {
+  display: flex;
+  align-items: center;
+}
+
 .login.show {
   opacity: 1;
   pointer-events: visible;

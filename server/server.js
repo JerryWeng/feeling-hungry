@@ -4,6 +4,7 @@ dotenv.config()
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
+import AuthRoute from './routes/auth.js'
 
 const app = express()
 
@@ -24,6 +25,9 @@ app.use((req, res, next) => { // Whenever a request is made, log out what happen
     console.log(req.method)
     next()
 })
+
+// Defining the routes for the server to listen on, transitive relationship
+app.use('/api/auth', AuthRoute)
 
 mongoose
     .connect(process.env.REACT_APP_MONGO_URL)
