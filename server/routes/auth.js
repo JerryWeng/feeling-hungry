@@ -10,7 +10,7 @@ import {
 const AuthRoute = express.Router()
 
 // TLDR: an event listener on a defined URL. Whenever a certain request is made on that URL, run callback/handler/controller
-AuthRoute.post('/', loginUser)
+AuthRoute.post('/login', loginUser)
 
 AuthRoute.post('/register', registerUser)
 

@@ -60,14 +60,17 @@ export const registerUser = async (req, res) => {
 
     if (!username || !password) {
         return res.status(400).json({
-            message: "Username, Password are required."
+            message: "Username, Password are required.",
+            data: null,
+            ok: false
         })
     }
 
     if (!verifyPasswordStrength(password)) {
         return res.status(400).json({
             message: "Password must have atleast 8 characters, one uppercase, one lowercase, one number, and one special character!",
-            data: null
+            data: null,
+            ok: false
         })
     }
 
@@ -104,12 +107,15 @@ export const registerUser = async (req, res) => {
         // Return status 200, which means success and the message is the registeredUser object
         return res.status(200).json({
             message: "User successfully registered!",
-            data: registeredUser
+            data: registeredUser,
+            ok: true
         })
     } catch (error) { 
         // FAILURE: Return status 500, which means failure, message = error
         return res.status(500).json({
-            message: error
+            message: error,
+            data: null,
+            ok: false
         })
     }
 } 
