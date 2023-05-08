@@ -2,15 +2,13 @@ import express from "express";
 
 // Controller functions will be imported here
 import {
-    registerUser,
-    loginUser
-} from '../controllers/authController.js'
+    nearbySearch
+} from '../controllers/searchController.js'
 
 // Create a Router object so Express knows that you will have routes, assigned into variable AuthRoute
-const AuthRoute = express.Router()
+const SearchRoute = express.Router()
 
 // TLDR: an event listener on a defined URL. Whenever a certain request is made on that URL, run callback/handler/controller
-AuthRoute.post('/login', loginUser)
-AuthRoute.post('/register', registerUser)
+SearchRoute.post('/', nearbySearch)
 
-export default AuthRoute
+export default SearchRoute
