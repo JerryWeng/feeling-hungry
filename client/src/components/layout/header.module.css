@@ -9,3 +9,15 @@
   cursor: pointer;
   font-size: 1em;
 }
+
+.authButtons-container {
+  display: flex;
+  gap: 20px
+}
+
+.authButtons { 
+  background: #fff;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 4px;
+}

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext.js";
 
 import RouterLink from "../ui/RouterLink.jsx";
-import Login from "../../pages/login/Login.jsx";
 
 import styles from "./header.module.css";
 
@@ -20,9 +19,9 @@ const Header = () => {
     <div className="bg-blue-900 flex justify-center items-center px-2 py-4">
       <div className="space-x-5">
         <RouterLink linkText="Home" to="/" />
-        <RouterLink linkText="Social" to="/social" />
+        {/* <RouterLink linkText="Social" to="/social" /> */}
       </div>
-      <nav>
+      <nav >
         {user && (
           <div>
             <span>{user.username}</span>
@@ -32,9 +31,9 @@ const Header = () => {
           </div>
         )}
         {!user && (
-          <div>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+          <div className={styles['authButtons-container']}>
+            <Link className={styles['authButtons']} to="/login">Login</Link>
+            <Link className={styles['authButtons']} to="/register">Register</Link>
           </div>
         )}
       </nav>
