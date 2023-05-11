@@ -1,6 +1,7 @@
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import React, { useState, useMemo, useCallback } from "react";
 
+import RestaurantList from './RestaurantList.jsx';
 import styles from "./map.module.css";
 
 export default function Map() {
@@ -9,6 +10,7 @@ export default function Map() {
   const [markers, setMarkers] = useState([]);
   const [coordinates, setCoordinates] = useState();
   const [showMarkers, setShowMarkers] = useState(false);
+  const [showRestaurantList, setShowRestaurantList] = useState(false);
 
   const mapStyles = styles["map-container"];
   const options = useMemo(
@@ -77,7 +79,7 @@ export default function Map() {
     if (!map || !coordinates) {
       return;
     }
-
+  
     try {
       const result = await getGeocoderResult(coordinates);
       const places = await searchNearbyPlaces(
@@ -85,7 +87,7 @@ export default function Map() {
         2000,
         ["restaurant"]
       );
-
+  
       if (showMarkers) {
         markers.forEach((marker) => {
           marker.setMap(null);
@@ -102,9 +104,10 @@ export default function Map() {
         });
         setMarkers(newMarkers);
       }
-
+  
       setPlaces(places);
       setShowMarkers(!showMarkers);
+      setShowRestaurantList(true);
     } catch (error) {
       console.log(error);
     }
@@ -136,6 +139,7 @@ export default function Map() {
                 Find Restaurants
               </button>
             )}
+            {showRestaurantList && <RestaurantList places={places} />}
           </GoogleMap>
         </div>
       </div>
