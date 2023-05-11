@@ -1,6 +1,6 @@
 import styles from "./register.module.css";
 import { useState } from "react";
-import { useRegister } from "../hooks/useRegister.js";
+import { useRegister } from "../../hooks/useRegister.js";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -15,11 +15,8 @@ const Register = () => {
 
   return (
     <div className={styles["container"]}>
-      <h1 className={styles["title"]}>Register for Grub Gram now!</h1>
+      <h1 className={styles["title"]}>Register for GrubGram</h1>
       <form className={styles["registerForm"]} onSubmit={handleSubmit}>
-        <div className={styles["headings"]}>
-          <h3>Sign up</h3>
-        </div>
 
         <div className={styles["main"]}>
           <label htmlFor="username">Username: </label>

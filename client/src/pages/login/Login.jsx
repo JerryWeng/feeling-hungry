@@ -17,11 +17,8 @@ const Login = () => {
 
   return (
     <div className={styles["container"]}>
-      <h1 className={styles["title"]}>Login for Grub Gram now!</h1>
+      <h1 className={styles["title"]}>Login to GrubGram</h1>
       <form className={styles["loginForm"]} onSubmit={handleSubmit}>
-        <div className={styles["headings"]}>
-          <h3>Sign up</h3>
-        </div>
 
         <div className={styles["main"]}>
           <label htmlFor="username">Username: </label>

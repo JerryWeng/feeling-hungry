@@ -2,3 +2,20 @@
   width: 100%;
   height: 100vh;
 }
+
+.findButton {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.findButton:hover {
+  background-color: #0069d9;
+  cursor: pointer;
+}

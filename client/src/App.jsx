@@ -1,6 +1,6 @@
-import Register from "./pages/Register.jsx";
-import Home from "./pages/Home.jsx";
-import Social from "./pages/Social.jsx";
+import Register from "./pages/register/Register.jsx";
+import Home from "./pages/home/Home.jsx";
+import Social from "./pages/social/Social.jsx";
 import Login from "./pages/login/Login.jsx";
 import { Routes, Route } from "react-router-dom";
 

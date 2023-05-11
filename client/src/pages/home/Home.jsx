@@ -1,7 +1,6 @@
 import { useLoadScript } from "@react-google-maps/api";
 
-import Header from "../components/layout/Header.jsx";
-import Map from "../components/map/Map.jsx";
+import Map from "../../components/map/Map.jsx"
 
 const Home = () => {
   const { isLoaded } = useLoadScript({

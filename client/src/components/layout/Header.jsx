@@ -5,8 +5,6 @@ import { useAuthContext } from "../../hooks/useAuthContext.js";
 
 import RouterLink from "../ui/RouterLink.jsx";
 
-import styles from "./header.module.css";
-
 const Header = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
@@ -16,24 +14,37 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-blue-900 flex justify-center items-center px-2 py-4">
-      <div className="space-x-5">
+    <div className="fixed top-0 w-full z-50 bg-blue-900 bg-opacity-50 flex justify-center items-center px-2 py-4">
+      <div className="space-x-5 text-white">
         <RouterLink linkText="Home" to="/" />
-        {/* <RouterLink linkText="Social" to="/social" /> */}
+        <RouterLink linkText="Social" to="/social" />
       </div>
-      <nav >
+      <nav className="ml-auto">
         {user && (
-          <div>
+          <div className="text-white">
             <span>{user.username}</span>
-            <button className={styles["logout"]} onClick={handleClick}>
+            <button
+              className="ml-4 py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded"
+              onClick={handleClick}
+            >
               Log out
             </button>
           </div>
         )}
         {!user && (
-          <div className={styles['authButtons-container']}>
-            <Link className={styles['authButtons']} to="/login">Login</Link>
-            <Link className={styles['authButtons']} to="/register">Register</Link>
+          <div className="text-white">
+            <Link
+              className="mr-4 py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded"
+              to="/login"
+            >
+              Login
+            </Link>
+            <Link
+              className="py-2 px-4 bg-blue-500 hover:bg-blue-600 rounded"
+              to="/register"
+            >
+              Register
+            </Link>
           </div>
         )}
       </nav>
